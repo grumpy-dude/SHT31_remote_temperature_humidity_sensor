@@ -10,12 +10,7 @@
 #include <util/delay.h>
 #include <i2c_simple_master.h>
 #include "SHT31.h"
-
-#ifdef DEBUG
-    #define _DEBUG_PRINTF( ... )    printf( __VA_ARGS__ )
-#else
-    #define _DEBUG_PRINTF( ... )
-#endif
+#include "_DEBUG_PRINTF.h"
 
 
 bool SHT31Command( i2c_address_t SHT31_i2c_address, SHT31_command_t SHT31_command )

@@ -28,8 +28,10 @@
 #include <i2c_types.h>
 
 
-static const i2c_address_t SHT31_Default_Addr   = 0x44;
-static const i2c_address_t SHT31_Alternate_Addr = 0x45;
+typedef enum {
+    SHT31_Default_Addr   = 0x44,
+    SHT31_Alternate_Addr = 0x45
+} SHT31_i2c_address_t;
 
 /* From section 4.13 "Conversion of Signal Output" of Sensiron SHT3x datasheet */
 static const uint32_t SHT31_Common_Conversion_Factor        = 65535L;
